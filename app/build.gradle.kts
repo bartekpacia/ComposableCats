@@ -53,4 +53,19 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
+    // Ktor (for making HTTP requests)
+    implementation("io.ktor:ktor-client-core:3.1.1")
+    implementation("io.ktor:ktor-client-android:3.1.1")
+    implementation("io.ktor:ktor-client-content-negotiation:3.1.1")
+    implementation("io.ktor:ktor-serialization-kotlinx-json:3.1.1")
+
+    // KotlinX Serialization (for converting the HTTP JSON Response into object)
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.8.0")
+
+    // Navigation (for navigating between master and detail screens)
+    implementation("androidx.navigation:navigation-compose:2.8.9")
+
+    // Coil (for loading images from the internet)
+    implementation("io.coil-kt:coil-compose:2.6.0")
 }
