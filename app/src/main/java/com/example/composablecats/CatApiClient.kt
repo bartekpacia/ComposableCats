@@ -1,5 +1,6 @@
 package com.example.composablecats
 
+import androidx.compose.material3.Text
 import io.ktor.client.HttpClient
 import io.ktor.client.call.body
 import io.ktor.client.engine.android.Android

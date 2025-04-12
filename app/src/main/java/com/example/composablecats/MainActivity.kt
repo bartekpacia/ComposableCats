@@ -11,8 +11,9 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
+            // for example "7lr" or "9vp"
             ComposableCatsTheme {
-                CatScreen()
+                CatScreen(catId = "9vp")
             }
         }
     }
