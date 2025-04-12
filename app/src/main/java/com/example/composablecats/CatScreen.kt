@@ -16,6 +16,8 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
@@ -29,6 +31,15 @@ fun CatScreen(
     catId: String = "empty",
     onBackClick: () -> Unit = {},
 ) {
+    val apiClient = remember { CatApiClient() }
+
+    LaunchedEffect(Unit) {
+        val cats = apiClient.getCats(10)
+        for (cat in cats) {
+            println(cat)
+        }
+    }
+
     Scaffold(
         topBar = {
             TopAppBar(
